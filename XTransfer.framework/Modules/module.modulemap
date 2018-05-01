@@ -1,0 +1,6 @@
+framework module XTransfer {
+  umbrella header "XTransfer.h"
+
+  export *
+  module * { export * }
+}
