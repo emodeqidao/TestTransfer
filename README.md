@@ -5,6 +5,7 @@
 #import <XTransfer/XTransfer.h>
 
 [[XTranslateManager shareClient] setAppId:@"your baidu app id" secretkey:@"your baidu secretkey"];
+
 [[XTranslateManager shareClient] transfer:@"" toLanguage:XLanguage_en block:^(BOOL isRight, id responseObj) {
     NSLog(@"%@", responseObj);
 }];
