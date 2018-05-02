@@ -18,9 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [[XTranslateManager shareClient] setAppId:@"your baidu app id" secretkey:@"your baidu secretkey"];
-    [[XTranslateManager shareClient] transfer:@"" toLanguage:XLanguage_en block:^(BOOL isRight, id responseObj) {
-        
+    
+
+    
+    [[XTranslateManager shareClient] setAppId:@"your baidu appID" secretkey:@"your baidu secretkey"];
+    [[XTranslateManager shareClient] transfer:@"嘿 我要去北京" toLanguage:XLanguage_en block:^(BOOL isRight, id responseObj) {
+
     }];
 }
 

@@ -50,6 +50,7 @@ typedef void(^resultBlock)(BOOL isRight, id responseObj);
 
 @property(nonatomic, strong) NSString *appId;
 @property(nonatomic, strong) NSString *secKey;
+@property(nonatomic, strong) NSString *apiURL;
 
 
 +(XTranslateManager *)shareClient;
@@ -65,6 +66,14 @@ typedef void(^resultBlock)(BOOL isRight, id responseObj);
 
 
 /**
+ 设置请求百度翻译SDK 的请求的URL，因为发现有可能会发生改变，不传就默认
+
+ @param apiURLArg api url default:https://api.fanyi.baidu.com/api/trans/vip/translate
+ */
+-(void) setAPIURL:(NSString *)apiURLArg;
+
+
+/**
  翻译 - 直接返回翻译的结果
  被翻译的设置成自动 auto
  只需要传入 想要翻译成的语言就好
@@ -74,6 +83,4 @@ typedef void(^resultBlock)(BOOL isRight, id responseObj);
  @param block return result
  */
 -(void) transfer:(NSString *)queryStr toLanguage:(XLanguageType)languageType block:(resultBlock)block;
-
-
 @end
