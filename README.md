@@ -4,6 +4,10 @@
 你需要导入
 #import <XTransfer/XTransfer.h>
 
+other linker  flags 添加 -all_load参数。
+Project ->build settings ->linking->Other Linker flags
+
+
 [[XTranslateManager shareClient] setAppId:@"your baidu app id" secretkey:@"your baidu secretkey"];
 
 [[XTranslateManager shareClient] transfer:@"" toLanguage:XLanguage_en block:^(BOOL isRight, id responseObj) {
