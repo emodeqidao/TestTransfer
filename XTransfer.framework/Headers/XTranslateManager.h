@@ -68,7 +68,7 @@ typedef void(^resultBlock)(BOOL isRight, id responseObj);
 /**
  设置请求百度翻译SDK 的请求的URL，因为发现有可能会发生改变，不传就默认
 
- @param apiURLArg api url default:https://api.fanyi.baidu.com/api/trans/vip/translate
+ @param apiURLArg api url default:http://api.fanyi.baidu.com/api/trans/vip/translate
  */
 -(void) setAPIURL:(NSString *)apiURLArg;
 
